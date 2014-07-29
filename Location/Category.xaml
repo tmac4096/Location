@@ -10,25 +10,64 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    mc:Ignorable="d" shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" MinHeight="161"/>
+            <RowDefinition Height="166*"/>
+            <RowDefinition Height="104*"/>
+            <RowDefinition Height="337*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Location Ads" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Find Hot Query" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Hot Shops" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="White"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="55,525,0,0" VerticalAlignment="Top" Width="304" Grid.Row="1" Click="Button_Click_1"/>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="127,-12,26,0" TextWrapping="Wrap" Text="Mitchell's Fish Market (010 111222) Location 1 km" VerticalAlignment="Top" Height="64"/>
+            <TextBlock Margin="127,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" HorizontalAlignment="Left" Width="329" Text="Makets"/>
+            <Image HorizontalAlignment="Left" Margin="45,-14,0,0" VerticalAlignment="Top" Source="/Assets/th2QNXCZ93.jpg" Height="64" Width="65"/>
+            <Image HorizontalAlignment="Left" Margin="45,65,0,0" VerticalAlignment="Top" Source="/Assets/thURN0WH55.jpg" Height="57" Width="65"/>
+            <Image HorizontalAlignment="Left" Margin="46,460,0,0" VerticalAlignment="Top" Source="/Assets/th3YSIGUFT.jpg" Height="51" Width="65"/>
+            <Image HorizontalAlignment="Left" Margin="46,410,0,0" VerticalAlignment="Top" Source="/Assets/thUEN35U3W.jpg" Height="35" Width="59" RenderTransformOrigin="0.507,1.198"/>
+            <Image HorizontalAlignment="Left" Margin="45,144,0,0" VerticalAlignment="Top" Source="/Assets/thJ6A7NL8P.jpg" Height="62" Width="65"/>
+            <Image HorizontalAlignment="Left" Margin="45,340,0,0" VerticalAlignment="Top" Source="/Assets/thYLFVCRGY.jpg" Height="47" Width="65"/>
+        </Grid>
+        <Button Content="Next" Margin="74,266,0,-1" VerticalAlignment="Top" Grid.Row="3" Click="Button_Click_1" HorizontalAlignment="Left" Width="304" Height="72"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,64,0,0">
+        	<Run Text="KFC "/>
+        	<Run Text="(010 111222) "/>
+        	<LineBreak/>
+        	<Run Text="Location 1"/>
+        	<Run Text=".5"/>
+        	<Run Text=" km"/>
+        </TextBlock>
+        <TextBlock Margin="12,63,3,294" Style="{StaticResource PhoneTextTitle1Style}" Grid.Row="2" Grid.RowSpan="2">
+        	<Run Text="Hot "/>
+        	<Run Text="Cat"/>
+        	<Run Text="s"/>
+        </TextBlock>
+        <TextBlock Margin="139,134,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Grid.Row="3">
+        	<Run Text="Restaurant"/>
+        	<Run Text="s"/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,145,0,0" Grid.RowSpan="2">
+        	<Run Text="Starbucks"/>
+        	<Run Text="(010 111222) "/>
+        	<LineBreak/>
+        	<Run Text="Location "/>
+        	<Run Text="2"/>
+        	<Run Text=" km"/>
+        </TextBlock>
+        <TextBlock Margin="139,82,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Grid.Row="3" Text="Cafes"/>
     </Grid>
 
 </phone:PhoneApplicationPage>
