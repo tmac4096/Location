@@ -33,15 +33,24 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <TextBlock Margin="127,-12,26,0" TextWrapping="Wrap" Text="Mitchell's Fish Market (010 111222) Location 1 km" VerticalAlignment="Top" Height="64"/>
-            <TextBlock Margin="127,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" HorizontalAlignment="Left" Width="329" Text="Makets"/>
             <Image HorizontalAlignment="Left" Margin="45,-14,0,0" VerticalAlignment="Top" Source="/Assets/th2QNXCZ93.jpg" Height="64" Width="65"/>
             <Image HorizontalAlignment="Left" Margin="45,65,0,0" VerticalAlignment="Top" Source="/Assets/thURN0WH55.jpg" Height="57" Width="65"/>
-            <Image HorizontalAlignment="Left" Margin="46,460,0,0" VerticalAlignment="Top" Source="/Assets/th3YSIGUFT.jpg" Height="51" Width="65"/>
-            <Image HorizontalAlignment="Left" Margin="46,410,0,0" VerticalAlignment="Top" Source="/Assets/thUEN35U3W.jpg" Height="35" Width="59" RenderTransformOrigin="0.507,1.198"/>
             <Image HorizontalAlignment="Left" Margin="45,144,0,0" VerticalAlignment="Top" Source="/Assets/thJ6A7NL8P.jpg" Height="62" Width="65"/>
-            <Image HorizontalAlignment="Left" Margin="45,340,0,0" VerticalAlignment="Top" Source="/Assets/thYLFVCRGY.jpg" Height="47" Width="65"/>
+            <ListBox x:Name="listbox"  HorizontalAlignment="Left" Height="224.5" Margin="40,342.643,0,0" VerticalAlignment="Top" Width="390" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <ListBox.RenderTransform>
+                    <CompositeTransform SkewY="-0.845" TranslateY="2.235"/>
+                </ListBox.RenderTransform>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding Pictrue}" Width="65" Height="65"/>
+                            <TextBlock Text="        " Foreground="Black" FontSize="35"/>
+                            <TextBlock Text="{Binding Name}" Foreground="White" FontSize="35"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
-        <Button Content="Next" Margin="74,266,0,-1" VerticalAlignment="Top" Grid.Row="3" Click="Button_Click_1" HorizontalAlignment="Left" Width="304" Height="72"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,64,0,0">
         	<Run Text="KFC "/>
         	<Run Text="(010 111222) "/>
@@ -50,14 +59,9 @@
         	<Run Text=".5"/>
         	<Run Text=" km"/>
         </TextBlock>
-        <TextBlock Margin="12,63,3,294" Style="{StaticResource PhoneTextTitle1Style}" Grid.Row="2" Grid.RowSpan="2">
+        <TextBlock Margin="12,63,3,282" Style="{StaticResource PhoneTextTitle1Style}" Grid.Row="2" Grid.RowSpan="2" FontSize="60">
         	<Run Text="Hot "/>
-        	<Run Text="Cat"/>
-        	<Run Text="s"/>
-        </TextBlock>
-        <TextBlock Margin="139,134,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Grid.Row="3">
-        	<Run Text="Restaurant"/>
-        	<Run Text="s"/>
+        	<Run Text="Categories"/>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,145,0,0" Grid.RowSpan="2">
         	<Run Text="Starbucks"/>
@@ -67,7 +71,7 @@
         	<Run Text="2"/>
         	<Run Text=" km"/>
         </TextBlock>
-        <TextBlock Margin="139,82,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Grid.Row="3" Text="Cafes"/>
+
     </Grid>
 
 </phone:PhoneApplicationPage>

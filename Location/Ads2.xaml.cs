@@ -22,31 +22,6 @@ namespace Location
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            ContentPanel.Children.Remove(Location2);
-            ContentPanel.Children.Remove(Phone2);
-            ContentPanel.Children.Remove(Image2);
-            ContentPanel.Children.Remove(Delete2);
-            ContentPanel.Children.Remove(DeleteImage2);
-            ContentPanel.Children.Remove(Title2);
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            ContentPanel.Children.Remove(Location3);
-            ContentPanel.Children.Remove(Phone3);
-            ContentPanel.Children.Remove(Image3);
-            ContentPanel.Children.Remove(Delete3);
-            ContentPanel.Children.Remove(DeleteImage3);
-            ContentPanel.Children.Remove(Title3);
-        }
-
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             ContentPanel.Children.Remove(Location1);

@@ -1,0 +1,43 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Location.Page4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Location Ads" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Ads Result" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock x:Name="Phone2" HorizontalAlignment="Left" Margin="117,67,0,0" TextWrapping="Wrap" Text="(248) 646-3663" VerticalAlignment="Top"/>
+            <Image x:Name="Image2" HorizontalAlignment="Left" Height="100" Margin="11,22,0,0" Source="/Assets/Ad2_Title.png" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.51,1.682"/>
+            <Button x:Name="Delete2" Content="" HorizontalAlignment="Left" Margin="384,21,-6,0" VerticalAlignment="Top" Height="119" Width="78" Click="Button_Click_2" Background="#FF210202"/>
+            <Image x:Name="DeleteImage2" HorizontalAlignment="Left" Height="35" Margin="400,59,0,0" Source="/Assets/Dislike.png" VerticalAlignment="Top" Width="46"/>
+            <TextBlock x:Name="Location2" HorizontalAlignment="Left" Margin="116,94,0,0" TextWrapping="Wrap" Text="777 m" VerticalAlignment="Top" Height="36" Width="146"/>
+            <TextBlock x:Name="Title2" HorizontalAlignment="Left" Margin="116,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="24">
+            	<Run FontWeight="Bold" Text="Restaurant Reservations"/>
+            </TextBlock>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
