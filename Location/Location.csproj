@@ -153,19 +153,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Ad1_Title.png" />
+    <Content Include="Assets\McDonalds.jpg" />
     <Content Include="Assets\Ad2_Title.png" />
-    <Content Include="Assets\Ad3_Title.png" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Dislike.png" />
-    <Content Include="Assets\th2QNXCZ93.jpg" />
-    <Content Include="Assets\th3YSIGUFT.jpg" />
-    <Content Include="Assets\thJ6A7NL8P.jpg" />
-    <Content Include="Assets\thUEN35U3W.jpg" />
-    <Content Include="Assets\thURN0WH55.jpg" />
-    <Content Include="Assets\thYLFVCRGY.jpg" />
+    <Content Include="Assets\Ad3_Title.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -181,9 +176,13 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\untitled.png" />
-    <Content Include="thUEN35U3W.jpg" />
+    <Content Include="Assets\Cafes.jpg" />
+    <Content Include="Assets\KFC.jpg" />
+    <Content Include="Assets\Makets.jpg" />
+    <Content Include="Assets\Michell_fish_maket.jpg" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="Assets\Restaurants.jpg" />
+    <Content Include="Assets\Starbucks.jpg" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />

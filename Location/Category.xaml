@@ -32,26 +32,27 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Margin="127,-12,26,0" TextWrapping="Wrap" Text="Mitchell's Fish Market (010 111222) Location 1 km" VerticalAlignment="Top" Height="64"/>
-            <Image HorizontalAlignment="Left" Margin="45,-14,0,0" VerticalAlignment="Top" Source="/Assets/th2QNXCZ93.jpg" Height="64" Width="65"/>
-            <Image HorizontalAlignment="Left" Margin="45,65,0,0" VerticalAlignment="Top" Source="/Assets/thURN0WH55.jpg" Height="57" Width="65"/>
-            <Image HorizontalAlignment="Left" Margin="45,144,0,0" VerticalAlignment="Top" Source="/Assets/thJ6A7NL8P.jpg" Height="62" Width="65"/>
-            <ListBox x:Name="listbox"  HorizontalAlignment="Left" Height="224.5" Margin="40,342.643,0,0" VerticalAlignment="Top" Width="390" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock Margin="127,-24,26,0" TextWrapping="Wrap" Text="Mitchell's Fish Market (010 111222) Location 1 km" VerticalAlignment="Top" Height="64"/>
+            <Image HorizontalAlignment="Left" Margin="45,-26,0,0" VerticalAlignment="Top" Source="/Assets/michell_fish_maket.jpg" Height="64" Width="65"/>
+            <Image HorizontalAlignment="Left" Margin="45,45,0,0" VerticalAlignment="Top" Source="/Assets/KFC.jpg" Height="63" Width="65"/>
+            <Image HorizontalAlignment="Left" Margin="45,115,0,0" VerticalAlignment="Top" Source="/Assets/Starbucks.jpg" Height="62" Width="65"/>
+            <ListBox x:Name="listbox"  HorizontalAlignment="Left" Height="216.534" Margin="40,371.093,0,0" VerticalAlignment="Top" Width="390" SelectionChanged="ListBox_SelectionChanged" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <ListBox.RenderTransform>
                     <CompositeTransform SkewY="-0.845" TranslateY="2.235"/>
                 </ListBox.RenderTransform>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding Pictrue}" Width="65" Height="65"/>
-                            <TextBlock Text="        " Foreground="Black" FontSize="35"/>
+                            <Image Source="{Binding Pictrue}" Width="65" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Stretch="Fill"/>
+                            <TextBlock Text="  " Foreground="Black" FontSize="35"/>
                             <TextBlock Text="{Binding Name}" Foreground="White" FontSize="35"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <Image HorizontalAlignment="Left" Margin="45,185,0,0" VerticalAlignment="Top" Source="/Assets/McDonalds.jpg" Height="62" Width="65"/>
         </Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,64,0,0">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,46,0,0">
         	<Run Text="KFC "/>
         	<Run Text="(010 111222) "/>
         	<LineBreak/>
@@ -59,16 +60,25 @@
         	<Run Text=".5"/>
         	<Run Text=" km"/>
         </TextBlock>
-        <TextBlock Margin="12,63,3,282" Style="{StaticResource PhoneTextTitle1Style}" Grid.Row="2" Grid.RowSpan="2" FontSize="60">
+        <TextBlock Margin="12,13,3,228" Style="{StaticResource PhoneTextTitle1Style}" Grid.Row="3" FontSize="60">
         	<Run Text="Hot "/>
         	<Run Text="Categories"/>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,145,0,0" Grid.RowSpan="2">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="1" Margin="139,116,0,0" Grid.RowSpan="2">
         	<Run Text="Starbucks"/>
         	<Run Text="(010 111222) "/>
         	<LineBreak/>
         	<Run Text="Location "/>
         	<Run Text="2"/>
+        	<Run Text=" km"/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="329" Grid.Row="2" Margin="139,21,0,0">
+        	<Run Text="McDonalds"/>
+        	<Run Text="(010 111222) "/>
+        	<LineBreak/>
+        	<Run Text="Location "/>
+        	<Run Text="2"/>
+        	<Run Text=".2"/>
         	<Run Text=" km"/>
         </TextBlock>
 

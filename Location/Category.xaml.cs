@@ -22,15 +22,15 @@ namespace Location
             InitializeComponent();
             List<ListItem> list = new List<ListItem>();
             ListItem item_coffee = new ListItem();
-            item_coffee.Pictrue = new BitmapImage(new Uri("Assets/thYLFVCRGY.jpg", UriKind.Relative));
+            item_coffee.Pictrue = new BitmapImage(new Uri("Assets/Cafes.jpg", UriKind.Relative));
             item_coffee.Name = "Cafes";
             list.Add(item_coffee);
             ListItem item_restaurant = new ListItem();
-            item_restaurant.Pictrue = new BitmapImage(new Uri("Assets/thUEN35U3W.jpg", UriKind.Relative));
+            item_restaurant.Pictrue = new BitmapImage(new Uri("Assets/Restaurants.jpg", UriKind.Relative));
             item_restaurant.Name = "Restaurants";
             list.Add(item_restaurant);
             ListItem item_maket = new ListItem();
-            item_maket.Pictrue = new BitmapImage(new Uri("Assets/th3YSIGUFT.jpg", UriKind.Relative));
+            item_maket.Pictrue = new BitmapImage(new Uri("Assets/Makets.jpg", UriKind.Relative));
             item_maket.Name = "Makets";
             list.Add(item_maket);
             listbox.ItemsSource = list;
