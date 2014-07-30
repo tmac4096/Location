@@ -20,16 +20,16 @@ namespace Location
         public Page1()
         {
             InitializeComponent();
-            List<SString> list = new List<SString>();
-            SString item_coffee = new SString();
+            List<ListItem> list = new List<ListItem>();
+            ListItem item_coffee = new ListItem();
             item_coffee.Pictrue = new BitmapImage(new Uri("Assets/thYLFVCRGY.jpg", UriKind.Relative));
             item_coffee.Name = "Cafes";
             list.Add(item_coffee);
-            SString item_restaurant = new SString();
+            ListItem item_restaurant = new ListItem();
             item_restaurant.Pictrue = new BitmapImage(new Uri("Assets/thUEN35U3W.jpg", UriKind.Relative));
             item_restaurant.Name = "Restaurants";
             list.Add(item_restaurant);
-            SString item_maket = new SString();
+            ListItem item_maket = new ListItem();
             item_maket.Pictrue = new BitmapImage(new Uri("Assets/th3YSIGUFT.jpg", UriKind.Relative));
             item_maket.Name = "Makets";
             list.Add(item_maket);
@@ -38,19 +38,19 @@ namespace Location
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Ads.xaml", UriKind.Relative)); 
+            NavigationService.Navigate(new Uri("/Ads.xaml", UriKind.Relative));
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListBox listbox = sender as ListBox;
-            SString s = listbox.SelectedItem as SString;
+            ListItem s = listbox.SelectedItem as ListItem;
 
             if (s != null)
             {
-                if(listbox.SelectedIndex==0)
+                if (listbox.SelectedIndex == 0)
                 {
-                    NavigationService.Navigate(new Uri("/Ads0.xaml", UriKind.Relative)); 
+                    NavigationService.Navigate(new Uri("/Ads0.xaml", UriKind.Relative));
                 }
                 else if (listbox.SelectedIndex == 1)
                 {
@@ -62,7 +62,7 @@ namespace Location
                 }
             }
             // Clear the selection before we navigate away
-            listbox.SelectedItem = null;  
+            listbox.SelectedItem = null;
         }
     }
 }

@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -42,13 +43,16 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Location Ads" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="Find My Location" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Next" Margin="74,525,0,0" VerticalAlignment="Top" Click="Button_Click_1" HorizontalAlignment="Left" Width="304"/>
-
+        <Grid x:Name="MapPanel" Grid.Row="1" Margin="12,0,12,0">
+            <maps:Map x:Name="mapWithMyLocation" />
+        </Grid>
+        
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+            <Button Content="Favorite things" BorderBrush="DarkGoldenrod" HorizontalAlignment="Left" Margin="254,585,0,0" VerticalAlignment="Top" Width="204" Foreground="Crimson" Click="Button_Click_1"/>
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are

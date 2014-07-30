@@ -8,6 +8,11 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Location.Resources;
+using Microsoft.Phone.Maps.Controls;
+using System.Device.Location; // Provides the GeoCoordinate class.
+using Windows.Devices.Geolocation; //Provides the Geocoordinate class.
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace Location
 {
@@ -17,6 +22,7 @@ namespace Location
         public LandingPage()
         {
             InitializeComponent();
+            ShowMyLocationOnTheMap();
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
@@ -25,6 +31,39 @@ namespace Location
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Category.xaml", UriKind.Relative)); 
+        }
+
+        private async void ShowMyLocationOnTheMap()
+        {
+            // Get my current location.
+            Geolocator myGeolocator = new Geolocator();
+            Geoposition myGeoposition = await myGeolocator.GetGeopositionAsync();
+            Geocoordinate myGeocoordinate = myGeoposition.Coordinate;
+            GeoCoordinate myGeoCoordinate = CoordinateConverter.ConvertGeocoordinate(myGeocoordinate);
+            this.mapWithMyLocation.Center = myGeoCoordinate;
+            this.mapWithMyLocation.ZoomLevel = 15;
+
+            // Create a small circle to mark the current location.
+            Ellipse myCircle = new Ellipse();
+            myCircle.Fill = new SolidColorBrush(Colors.Blue);
+            myCircle.Height = 20;
+            myCircle.Width = 20;
+            myCircle.Opacity = 50;
+
+
+            // Create a MapOverlay to contain the circle.
+            MapOverlay myLocationOverlay = new MapOverlay();
+            myLocationOverlay.Content = myCircle;
+            myLocationOverlay.PositionOrigin = new Point(0.5, 0.5);
+            myLocationOverlay.GeoCoordinate = myGeoCoordinate;
+
+            // Create a MapLayer to contain the MapOverlay.
+            MapLayer myLocationLayer = new MapLayer();
+            myLocationLayer.Add(myLocationOverlay);
+
+            // Add the MapLayer to the Map.
+            mapWithMyLocation.Layers.Add(myLocationLayer);
+
         }
 
         private void BuildLocalizedApplicationBar()

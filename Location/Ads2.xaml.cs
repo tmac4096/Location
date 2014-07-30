@@ -17,11 +17,6 @@ namespace Location
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             ContentPanel.Children.Remove(Location1);
